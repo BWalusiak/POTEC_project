@@ -15,7 +15,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <lib desc="file#E:\LogisimProjects\7digit.circ" name="7"/>
+  <lib desc="file#7digit.circ" name="7"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -54,52 +54,39 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <wire from="(670,230)" to="(670,240)"/>
-    <wire from="(520,190)" to="(520,260)"/>
-    <wire from="(360,310)" to="(550,310)"/>
-    <wire from="(650,190)" to="(700,190)"/>
-    <wire from="(360,300)" to="(540,300)"/>
-    <wire from="(690,170)" to="(690,240)"/>
-    <wire from="(650,170)" to="(690,170)"/>
-    <wire from="(540,210)" to="(540,300)"/>
-    <wire from="(650,360)" to="(690,360)"/>
-    <wire from="(360,290)" to="(530,290)"/>
-    <wire from="(680,210)" to="(680,240)"/>
-    <wire from="(520,190)" to="(620,190)"/>
-    <wire from="(520,340)" to="(620,340)"/>
-    <wire from="(510,170)" to="(620,170)"/>
-    <wire from="(510,360)" to="(620,360)"/>
-    <wire from="(530,290)" to="(530,320)"/>
-    <wire from="(510,170)" to="(510,250)"/>
-    <wire from="(550,230)" to="(550,310)"/>
-    <wire from="(510,270)" to="(510,360)"/>
-    <wire from="(670,300)" to="(670,320)"/>
-    <wire from="(680,300)" to="(680,340)"/>
-    <wire from="(360,260)" to="(520,260)"/>
-    <wire from="(360,280)" to="(520,280)"/>
-    <wire from="(650,230)" to="(670,230)"/>
-    <wire from="(650,320)" to="(670,320)"/>
-    <wire from="(650,340)" to="(680,340)"/>
-    <wire from="(650,210)" to="(680,210)"/>
-    <wire from="(530,320)" to="(620,320)"/>
-    <wire from="(360,250)" to="(510,250)"/>
-    <wire from="(360,270)" to="(510,270)"/>
-    <wire from="(550,230)" to="(620,230)"/>
-    <wire from="(520,280)" to="(520,340)"/>
-    <wire from="(690,300)" to="(690,360)"/>
-    <wire from="(540,210)" to="(620,210)"/>
-    <wire from="(700,190)" to="(700,240)"/>
-    <comp lib="1" loc="(650,170)" name="NOT Gate"/>
-    <comp lib="1" loc="(650,320)" name="NOT Gate"/>
-    <comp lib="1" loc="(650,340)" name="NOT Gate"/>
-    <comp lib="1" loc="(650,360)" name="NOT Gate"/>
+    <wire from="(390,270)" to="(390,340)"/>
+    <wire from="(380,200)" to="(440,200)"/>
+    <wire from="(390,210)" to="(450,210)"/>
+    <wire from="(390,340)" to="(440,340)"/>
+    <wire from="(370,320)" to="(420,320)"/>
+    <wire from="(360,310)" to="(410,310)"/>
+    <wire from="(380,330)" to="(430,330)"/>
+    <wire from="(420,230)" to="(420,240)"/>
+    <wire from="(420,300)" to="(420,320)"/>
+    <wire from="(430,220)" to="(430,240)"/>
+    <wire from="(410,230)" to="(410,310)"/>
+    <wire from="(400,220)" to="(400,300)"/>
+    <wire from="(450,210)" to="(450,240)"/>
+    <wire from="(430,300)" to="(430,330)"/>
+    <wire from="(370,290)" to="(370,320)"/>
+    <wire from="(360,300)" to="(400,300)"/>
+    <wire from="(400,220)" to="(430,220)"/>
+    <wire from="(360,270)" to="(390,270)"/>
+    <wire from="(360,260)" to="(390,260)"/>
+    <wire from="(360,280)" to="(380,280)"/>
+    <wire from="(360,250)" to="(380,250)"/>
+    <wire from="(440,200)" to="(440,240)"/>
+    <wire from="(440,300)" to="(440,340)"/>
+    <wire from="(410,230)" to="(420,230)"/>
+    <wire from="(360,290)" to="(370,290)"/>
+    <wire from="(390,210)" to="(390,260)"/>
+    <wire from="(380,200)" to="(380,250)"/>
+    <wire from="(380,280)" to="(380,330)"/>
+    <comp lib="5" loc="(420,240)" name="7-Segment Display"/>
     <comp lib="0" loc="(310,300)" name="Pin">
       <a name="width" val="4"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="1" loc="(650,210)" name="NOT Gate"/>
-    <comp lib="5" loc="(670,240)" name="7-Segment Display"/>
-    <comp lib="7" loc="(360,250)" name="7digit"/>
     <comp lib="0" loc="(310,300)" name="Splitter">
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
@@ -108,7 +95,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="bit2" val="1"/>
       <a name="bit3" val="0"/>
     </comp>
-    <comp lib="1" loc="(650,230)" name="NOT Gate"/>
-    <comp lib="1" loc="(650,190)" name="NOT Gate"/>
+    <comp lib="7" loc="(360,250)" name="7digit"/>
   </circuit>
 </project>
