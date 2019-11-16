@@ -3,16 +3,28 @@
 
 % Preamble
 \documentclass[a4paper, 12pt]{article}
+
+\usepackage{float}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage{hyperref}
 \usepackage{karnaugh-map}
 
 \begin{document}
-    \title{POTEC Project}
-    \author{Bartosz Walusiak, Krzysztof Zdulski, Monika Lewandowska}
+    \title{Projekt nr 1 POTEC}
+    \author{Monika Lewandowska, Bartosz Walusiak, Krzysztof Zdulski}
     \date{\today}
     \maketitle
 
-    \section{Task 1}
-    \begin{figure}[h]
+    \newpage
+    \section{Zadanie 1 - Minimalizacja funkcji za pomocą tablic Karnaugha dla mintermów}\label{sec:task-1}
+    \subsection{Funckja g}\label{subsec:fun-g}
+    Funkcja \(f_g\) zapisana w postaci mintermów wygląda następująco.
+    \[f_g(x_3, x_2, x_1, x_0) = \sum (2, 3, 4, 5, 6, 8, 9, (10, 11, 12, 13, 14, 15))\]
+    \begin{figure}[H]
         \centering
         \begin{karnaugh-map}[4][4][1][$x_1x_0$][$x_3x_2$]
             \minterms{2, 3, 4, 5, 6, 8, 9}
@@ -23,13 +35,20 @@
             \implicant{4}{13}
             \implicantedge{3}{2}{11}{10}
         \end{karnaugh-map}
-        \caption{Table for g}
+        \caption{Tablica dla funkcji \textrm{g}}
+        \label{fig:fg}
     \end{figure}
-
-    \begin{equation}
-        x_3 + x_0'x_1 + x_1x_2' + x_1'x_2
+    Minimalizację funkcji \(f_g(x_3, x_2, x_1, x_0)\) za pomocą tablicy Karnaugha przedstawiono na Rys.~\ref{fig:fg}.
+    Znaleziono 4 implikanty proste, z których wszystkie były niezbędne (\textrm{EIP}).
+    \begin{equation}\label{eq:fg}
+        f_g(x_3, x_2, x_1, x_0) = x_3 + x_0'x_1 + x_1x_2' + x_1'x_2
     \end{equation}
-    \section{Task 2}
+    Równanie~\ref{eq:fg} jest zminimalizowanym równaniem funkcji  \(f_g\).
+
+    \newpage
+    \section{Zadanie 2 - Minimalizacja funkcji za pomocą tablic Karnaugha dla maxtermów}\label{sec:task-2}
+    \subsection{Funckja a}\label{subsec:fun-a}
+    \[f_a(x_3, x_2, x_1, x_0) = \prod (1, 4, (10, 11, 12, 13, 14, 15))\]
     \begin{figure}[h]
         \centering
         \begin{karnaugh-map}[4][4][1][$x_1x_0$][$x_3x_2$]
@@ -39,11 +58,16 @@
             \implicant{4}{12}
             \implicant{1}{1}
         \end{karnaugh-map}
-        \caption{Table for a}
+        \caption{Tabela dla funkcji \textrm{a}}
+        \label{fig:fa}
     \end{figure}
-    \begin{equation}
+    \begin{equation}\label{eq:fa}
         (x_0 + x_1 + x_2')(x_0' + x_1 + x_2 + x_3)
     \end{equation}
+
+    \newpage
+    \subsection{Funckja b}\label{subsec:fun-b}
+    \[f_b(x_3, x_2, x_1, x_0) = \prod (5, 6, (10, 11, 12, 13, 14, 15))\]
     \begin{figure}[h]
         \centering
         \begin{karnaugh-map}[4][4][1][$x_1x_0$][$x_3x_2$]
@@ -53,7 +77,8 @@
             \implicant{5}{13}
             \implicant{6}{14}
         \end{karnaugh-map}
-        \caption{Table for b}
+        \caption{Tabela dla funkcji \textrm{b}}
+        \label{fig:fb}
     \end{figure}
     \begin{equation}
         (x_0' + x_1 + x_2')(x_0 + x_1' + x_2')
