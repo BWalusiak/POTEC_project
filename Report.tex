@@ -1,0 +1,61 @@
+%! Author = Bartosz Walusiak
+%! Date = 11/16/2019
+
+% Preamble
+\documentclass[a4paper, 12pt]{article}
+\usepackage{karnaugh-map}
+
+\begin{document}
+    \title{POTEC Project}
+    \author{Bartosz Walusiak, Krzysztof Zdulski, Monika Lewandowska}
+    \date{\today}
+    \maketitle
+
+    \section{Task 1}
+    \begin{figure}[h]
+        \centering
+        \begin{karnaugh-map}[4][4][1][$x_1x_0$][$x_2x_3$]
+            \minterms{2, 3, 4, 5, 6, 8, 9}
+            \maxterms{0, 1, 7}
+            \indeterminants{10, 11, 12, 13, 14, 15}
+            \implicant{2}{10}
+            \implicant{12}{10}
+            \implicant{4}{13}
+            \implicantedge{3}{2}{11}{10}
+        \end{karnaugh-map}
+        \caption{Table for g}
+    \end{figure}
+
+    \begin{equation}
+        x_3 + x_0'x_1 + x_1x_2' + x_1'x_2
+    \end{equation}
+    \section{Task 2}
+    \begin{figure}[h]
+        \centering
+        \begin{karnaugh-map}[4][4][1][$x_1x_0$][$x_2x_3$]
+            \minterms{0, 2, 3, 5, 6, 7, 8, 9}
+            \maxterms{1, 4}
+            \indeterminants{10, 11, 12, 13, 14, 15}
+            \implicant{4}{12}
+            \implicant{1}{1}
+        \end{karnaugh-map}
+        \caption{Table for a}
+    \end{figure}
+    \begin{equation}
+        (x_0 + x_1 + x_2')(x_0' + x_1 + x_2 + x_3)
+    \end{equation}
+    \begin{figure}[h]
+        \centering
+        \begin{karnaugh-map}[4][4][1][$x_1x_0$][$x_2x_3$]
+            \minterms{0, 1, 2, 3, 4, 7, 8, 9}
+            \maxterms{5, 6}
+            \indeterminants{10, 11, 12, 13, 14, 15}
+            \implicant{5}{13}
+            \implicant{6}{14}
+        \end{karnaugh-map}
+        \caption{Table for b}
+    \end{figure}
+    \begin{equation}
+        (x_0' + x_1 + x_2')(x_0 + x_1' + x_2')
+    \end{equation}
+\end{document}
