@@ -27,148 +27,21 @@
     \newpage
     \section{Zadanie 1 - Minimalizacja funkcji boolowskiej za pomocą tablic Karnaugha dla mintermów}\label{sec:task-1}
     \subsection{Funckja g}\label{subsec:fun-g}
-    Funkcja $f_g$ zapisana w postaci mintermów wygląda następująco.
-    \[f_g(x_3, x_2, x_1, x_0) = \sum (2, 3, 4, 5, 6, 8, 9, (10, 11, 12, 13, 14, 15))\]
-    \begin{figure}[H]
-        \centering
-        \begin{karnaugh-map}[4][4][1][$x_1x_0$][$x_3x_2$]
-            \minterms{2, 3, 4, 5, 6, 8, 9}
-            \maxterms{0, 1, 7}
-            \indeterminants{10, 11, 12, 13, 14, 15}
-            \implicant{2}{10}
-            \implicant{12}{10}
-            \implicant{4}{13}
-            \implicantedge{3}{2}{11}{10}
-        \end{karnaugh-map}
-        \caption{Tablica dla funkcji \textrm{g}}
-        \label{fig:fg}
-    \end{figure}
-    Minimalizację funkcji $f_g(x_3, x_2, x_1, x_0)$ za pomocą tablicy Karnaugha przedstawiono na Rys.~\ref{fig:fg}.
-    Znaleziono 4 implikanty proste, z których wszystkie były niezbędne (\textrm{EIP}).
-    \begin{equation}
-        \label{eq:fg}
-        f_g(x_3, x_2, x_1, x_0) = x_3 + x_0'x_1 + x_1x_2' + x_1'x_2
-    \end{equation}
-    Równanie~\ref{eq:fg} jest zminimalizowanym równaniem funkcji  $f_g$.
+    \input{function_g}
 
     \newpage
     \section{Zadanie 2 - Minimalizacja funkcji boolowskiej za pomocą tablic Karnaugha dla maxtermów}\label{sec:task-2}
     \subsection{Funckja a}\label{subsec:fun-a}
-    Funkcja $f_a$ zapisana w postaci maxtermów wygląda następująco.
-    \[f_a(x_3, x_2, x_1, x_0) = \prod (1, 4, (10, 11, 12, 13, 14, 15))\]
-    \begin{figure}[h]
-        \centering
-        \begin{karnaugh-map}[4][4][1][$x_1x_0$][$x_3x_2$]
-            \minterms{0, 2, 3, 5, 6, 7, 8, 9}
-            \maxterms{1, 4}
-            \indeterminants{10, 11, 12, 13, 14, 15}
-            \implicant{4}{12}
-            \implicant{1}{1}
-        \end{karnaugh-map}
-        \caption{Tabela dla funkcji \textrm{a}}
-        \label{fig:fa}
-    \end{figure}
-    Minimalizację funkcji $f_a(x_3, x_2, x_1, x_0)$ za pomocą tablicy Karnaugha przedstawiono na Rys.~\ref{fig:fa}.
-    Znaleziono 2 implikanty proste, z których wszystkie były niezbędne (\textrm{EIP}).
-    \begin{equation}
-        \label{eq:fa}
-        f_a(x_3, x_2, x_1, x_0) = (x_0 + x_1 + x_2')(x_0' + x_1 + x_2 + x_3)
-    \end{equation}
-    Równanie~\ref{eq:fa} jest zminimalizowanym równaniem funkcji  $f_a$.
+    \input{function_a}
 
     \newpage
     \subsection{Funckja b}\label{subsec:fun-b}
-    Funkcja $f_b$ zapisana w postaci maxtermów wygląda następująco.
-    \[f_b(x_3, x_2, x_1, x_0) = \prod (5, 6, (10, 11, 12, 13, 14, 15))\]
-    \begin{figure}[h]
-        \centering
-        \begin{karnaugh-map}[4][4][1][$x_1x_0$][$x_3x_2$]
-            \minterms{0, 1, 2, 3, 4, 7, 8, 9}
-            \maxterms{5, 6}
-            \indeterminants{10, 11, 12, 13, 14, 15}
-            \implicant{5}{13}
-            \implicant{6}{14}
-        \end{karnaugh-map}
-        \caption{Tabela dla funkcji \textrm{b}}
-        \label{fig:fb}
-    \end{figure}
-    Minimalizację funkcji $f_b(x_3, x_2, x_1, x_0)$ za pomocą tablicy Karnaugha przedstawiono na Rys.~\ref{fig:fb}.
-    Znaleziono 2 implikanty proste, z których wszystkie były niezbędne (\textrm{EIP}).
-    \begin{equation}
-        \label{eq:fb}
-        f_b(x_3, x_2, x_1, x_0) = (x_0' + x_1 + x_2')(x_0 + x_1' + x_2')
-    \end{equation}
-    Równanie~\ref{eq:fb} jest zminimalizowanym równaniem funkcji  $f_b$.
+    \input{function_b}
 
     \newpage
     \section{Zadanie 3 - Minimalizacja funkcji boolowskiej z wykorzystaniem systematycznej metody ekspansji}
     \label{sec:task-3}
     \subsection{Funckja d}\label{subsec:fun-d}
-    Funkcja $f_d$ rozpisana na macierze $F$ i $R$ ma postać:
-    \begin{center}
-        \begin{tabular}[t]{ |c|c c c c| }
-            \hline
-            $F$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
-            \hline
-            $k_0$ & 0 & 0 & 0 & 0 \\
-            $k_1$ & 0 & 0 & 1 & 0 \\
-            $k_2$ & 0 & 0 & 1 & 1 \\
-            $k_3$ & 0 & 1 & 0 & 1 \\
-            $k_4$ & 0 & 1 & 1 & 0 \\
-            $k_5$ & 1 & 0 & 0 & 0 \\
-            $k_6$ & 1 & 0 & 0 & 1 \\
-            \hline
-        \end{tabular}
-        \hspace{1cm}
-        \begin{tabular}[t]{ |c|c c c c| }
-            \hline
-            $R$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
-            \hline
-            & 0 & 0 & 0 & 1 \\
-            & 0 & 1 & 0 & 0 \\
-            & 0 & 1 & 1 & 1 \\
-            \hline
-        \end{tabular}
-    \end{center}
-
-    Rozpoczynamy od wyznaczenia wszystkich implikantów prostych korzystając z macierzy blokujących dla kolejnych kostek
-    $k_0-k_6$.
-    \begin{table}[H]
-        \centering
-        \begin{tabular}[t]{ |c|c c c c| }
-            \hline
-            $k_0$ & 0 & 0 & 0 & 0 \\
-            \hline\hline
-            $B_0$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
-            \hline
-            & 0 & 0 & 0 & \textbf{1} \\
-            & 0 & \textbf{1} & 0 & 0 \\
-            & \sout{0} & \sout{1} & \sout{1} & \sout{1} \\
-            \hline
-        \end{tabular}
-        \caption{Macierz blokująca $B_0$} \label{tab:b0}
-    \end{table}
-    Dla macierzy blokującej przedstawionej w Tablicy~\ref{tab:b0} znajdujemy jedno minimalne pokrycie kolumnowe
-    $\bm{L'=\{2,0\}}$ i wynikający z niego implikant prosty $I_0=(*0*0)=x_2'x_0'$.
-
-    \begin{table}[H]
-        \centering
-        \begin{tabular}[t]{ |c|c c c c| }
-            \hline
-            $k_1$ & 0 & 0 & 1 & 0 \\
-            \hline\hline
-            $B_1$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
-            \hline
-            & 0 & 0 & \textbf{1} & \textbf{1} \\
-            & 0 & 1 & \textbf{1} & 0 \\
-            & 0 & 1 & 0 & \textbf{1} \\
-            \hline
-        \end{tabular}
-        \caption{Macierz blokująca $B_1$} \label{tab:b1}
-    \end{table}
-    Dla macierzy blokującej przedstawionej w Tablicy~\ref{tab:b1} znajdujemy trzy minimalne pokrycia kolumnowe
-    $\bm{L'=\{1,0\}}$, $L'=\{2,0\}$, $L'=\{2,1\}$ i
-    wynikający z nich implikanty proste $I_1=(**10)=x_{1}x_0'$, \sout{$I_2=(*0*0)=x_2'x_0'$}, $I_3=(*01*)=x_2'x_1$.
-    Zauważamy, że implikant $I_2$ jest identyczny do implikantu $I_0$, więc go wykreślamy.
+    \input{function_d}
 
 \end{document}

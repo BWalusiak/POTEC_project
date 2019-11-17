@@ -1,0 +1,23 @@
+Funkcja $f_g$ zapisana w postaci mintermów wygląda następująco.
+\[f_g(x_3, x_2, x_1, x_0) = \sum (2, 3, 4, 5, 6, 8, 9, (10, 11, 12, 13, 14, 15))\]
+\begin{figure}[H]
+    \centering
+    \begin{karnaugh-map}[4][4][1][$x_1x_0$][$x_3x_2$]
+        \minterms{2, 3, 4, 5, 6, 8, 9}
+        \maxterms{0, 1, 7}
+        \indeterminants{10, 11, 12, 13, 14, 15}
+        \implicant{2}{10}
+        \implicant{12}{10}
+        \implicant{4}{13}
+        \implicantedge{3}{2}{11}{10}
+    \end{karnaugh-map}
+    \caption{Tablica dla funkcji \textrm{g}}
+    \label{fig:fg}
+\end{figure}
+Minimalizację funkcji $f_g(x_3, x_2, x_1, x_0)$ za pomocą tablicy Karnaugha przedstawiono na Rys.~\ref{fig:fg}.
+Znaleziono 4 implikanty proste, z których wszystkie były niezbędne (\textrm{EIP}).
+\begin{equation}
+    \label{eq:fg}
+    f_g(x_3, x_2, x_1, x_0) = x_3 + x_0'x_1 + x_1x_2' + x_1'x_2
+\end{equation}
+Równanie~\ref{eq:fg} jest zminimalizowanym równaniem funkcji  $f_g$.

@@ -1,0 +1,21 @@
+Funkcja $f_a$ zapisana w postaci maxtermów wygląda następująco.
+\[f_a(x_3, x_2, x_1, x_0) = \prod (1, 4, (10, 11, 12, 13, 14, 15))\]
+\begin{figure}[h]
+    \centering
+    \begin{karnaugh-map}[4][4][1][$x_1x_0$][$x_3x_2$]
+        \minterms{0, 2, 3, 5, 6, 7, 8, 9}
+        \maxterms{1, 4}
+        \indeterminants{10, 11, 12, 13, 14, 15}
+        \implicant{4}{12}
+        \implicant{1}{1}
+    \end{karnaugh-map}
+    \caption{Tabela dla funkcji \textrm{a}}
+    \label{fig:fa}
+\end{figure}
+Minimalizację funkcji $f_a(x_3, x_2, x_1, x_0)$ za pomocą tablicy Karnaugha przedstawiono na Rys.~\ref{fig:fa}.
+Znaleziono 2 implikanty proste, z których wszystkie były niezbędne (\textrm{EIP}).
+\begin{equation}
+    \label{eq:fa}
+    f_a(x_3, x_2, x_1, x_0) = (x_0 + x_1 + x_2')(x_0' + x_1 + x_2 + x_3)
+\end{equation}
+Równanie~\ref{eq:fa} jest zminimalizowanym równaniem funkcji  $f_a$.
