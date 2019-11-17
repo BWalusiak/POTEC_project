@@ -16,6 +16,13 @@
 \usepackage{ulem}
 \usepackage{bm}
 
+\newcounter{implicant_counter}
+\newcommand{\imp}[0]{
+I_{\arabic{implicant_counter}}
+\stepcounter{implicant_counter}
+}
+
+
 \begin{document}
     \title{Projekt nr 1 POTEC}
     \author{Monika Lewandowska, Bartosz Walusiak, Krzysztof Zdulski}
