@@ -30,3 +30,221 @@ Funkcja $f_c$ rozpisana na macierze $F$ i $R$ ma postać:
 
 Rozpoczynamy od wyznaczenia wszystkich implikantów prostych korzystając z macierzy blokujących dla kolejnych kostek
 $k_0-k_8$.
+\begin{table}[H]
+    \centering
+    \begin{tabular}[t]{ |c|c c c c| }
+        \hline
+        $k_0$ & 0 & 0 & 0 & 0 \\
+        \hline\hline
+        $B_0$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
+        \hline
+        & 0 & 0 & \textbf{1} & 0 \\
+        \hline
+    \end{tabular}
+    \caption{Macierz blokująca $B_0$} \label{tab:b0}
+\end{table}
+
+Dla macierzy blokującej przedstawionej w Tablicy~\ref{tab:b0} znajdujemy jedno minimalne pokrycie kolumnowe
+$\bm{L'=\{1\}}$ i wynikający z niego implikant prosty $\imp=({*}{*}0{*})=x_1'$.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}[t]{ |c|c c c c| }
+        \hline
+        $k_1$ & 0 & 0 & 0 & 1 \\
+        \hline\hline
+        $B_1$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
+        \hline
+        & 0 & 0 & \textbf{1} & \textbf{1} \\
+        \hline
+    \end{tabular}
+    \caption{Macierz blokująca $B_1$} \label{tab:b1}
+\end{table}
+
+Dla macierzy blokującej przedstawionej w Tablicy~\ref{tab:b1} znajdujemy dwa minimalne pokrycia kolumnowe
+$\bm{L'=\{0\}}$, $L'=\{1\}$ i
+wynikający z nich implikanty proste $\imp=({*}{*}{*}1)=x_0$, $\imp=({*}{*}0{*})=x_1'$.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}[t]{ |c|c c c c| }
+        \hline
+        $k_2$ & 0 & 0 & 1 & 1 \\
+        \hline\hline
+        $B_2$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
+        \hline
+        & 0 & 0 & 0 & \textbf{1} \\
+        \hline
+    \end{tabular}
+    \caption{Macierz blokująca $B_2$} \label{tab:b2}
+\end{table}
+
+Dla macierzy blokującej przedstawionej w Tablicy~\ref{tab:b0} znajdujemy jedno minimalne pokrycie kolumnowe
+$\bm{L'=\{0\}}$ i wynikający z niego implikant prosty $\imp=({*}{*}{*}1)=x_0$.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}[t]{ |c|c c c c| }
+        \hline
+        $k_3$ & 0 & 1 & 0 & 0 \\
+        \hline\hline
+        $B_3$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
+        \hline
+        & 0 & \textbf{1} & \textbf{1} & 0 \\
+        \hline
+    \end{tabular}
+    \caption{Macierz blokująca $B_3$} \label{tab:b3}
+\end{table}
+
+Dla macierzy blokującej przedstawionej w Tablicy~\ref{tab:b1} znajdujemy dwa minimalne pokrycia kolumnowe
+$\bm{L'=\{1\}}$, $L'=\{2\}$ i
+wynikający z nich implikanty proste $\imp=({*}{*}0{*})=x_1'$, $\imp=({*}1{*}{*})=x_2$.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}[t]{ |c|c c c c| }
+        \hline
+        $k_4$ & 0 & 1 & 0 & 1 \\
+        \hline\hline
+        $B_4$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
+        \hline
+        & 0 & \textbf{1} & \textbf{1} & \textbf{1} \\
+        \hline
+    \end{tabular}
+    \caption{Macierz blokująca $B_4$} \label{tab:b4}
+\end{table}
+
+Dla macierzy blokującej przedstawionej w Tablicy~\ref{tab:b1} znajdujemy trzy minimalne pokrycia kolumnowe
+$\bm{L'=\{0\}}$, $L'=\{1\}$, $L'=\{2\}$ i
+wynikający z nich implikanty proste $\imp=({*}{*}{*}1)=x_1$, $\imp=({*}{*}0{*})=x_1'$, $\imp=({*}1{*}{*})=x_2$.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}[t]{ |c|c c c c| }
+        \hline
+        $k_5$ & 0 & 1 & 1 & 0 \\
+        \hline\hline
+        $B_5$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
+        \hline
+        & 0 & \textbf{1} & 0 & 0 \\
+        \hline
+    \end{tabular}
+    \caption{Macierz blokująca $B_5$} \label{tab:b5}
+\end{table}
+
+Dla macierzy blokującej przedstawionej w Tablicy~\ref{tab:b0} znajdujemy jedno minimalne pokrycie kolumnowe
+$\bm{L'=\{2\}}$ i wynikający z niego implikant prosty $\imp=({*}1{*}{*})=x_2$.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}[t]{ |c|c c c c| }
+        \hline
+        $k_6$ & 0 & 1 & 1 & 1 \\
+        \hline\hline
+        $B_6$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
+        \hline
+        & 0 & \textbf{1} & 0 & \textbf{1} \\
+        \hline
+    \end{tabular}
+    \caption{Macierz blokująca $B_6$} \label{tab:b6}
+\end{table}
+
+Dla macierzy blokującej przedstawionej w Tablicy~\ref{tab:b1} znajdujemy dwa minimalne pokrycia kolumnowe
+$\bm{L'=\{0\}}$, $L'=\{2\}$ i
+wynikający z nich implikanty proste $\imp=({*}{*}{*}1)=x_0$, $\imp=({*}1{*}{*})=x_2$.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}[t]{ |c|c c c c| }
+        \hline
+        $k_7$ & 1 & 0 & 0 & 0 \\
+        \hline\hline
+        $B_7$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
+        \hline
+        & \textbf{1} & 0 & \textbf{1} & 0 \\
+        \hline
+    \end{tabular}
+    \caption{Macierz blokująca $B_7$} \label{tab:b7}
+\end{table}
+
+Dla macierzy blokującej przedstawionej w Tablicy~\ref{tab:b1} znajdujemy dwa minimalne pokrycia kolumnowe
+$\bm{L'=\{1\}}$, $L'=\{3\}$ i
+wynikający z nich implikanty proste $\imp=({*}{*}0{*})=x_1'$, $\imp=(1{*}{*}{*})=x_3$.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}[t]{ |c|c c c c| }
+        \hline
+        $k_8$ & 1 & 0 & 0 & 1 \\
+        \hline\hline
+        $B_8$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
+        \hline
+        & \textbf{1} & 0 & \textbf{1} & \textbf{1} \\
+        \hline
+    \end{tabular}
+    \caption{Macierz blokująca $B_8$} \label{tab:b8}
+\end{table}
+
+Dla macierzy blokującej przedstawionej w Tablicy~\ref{tab:b1} znajdujemy trzy minimalne pokrycia kolumnowe
+$\bm{L'=\{0\}}$, $L'=\{1\}$, $L'=\{3\}$ i
+wynikający z nich implikanty proste $\imp=({*}{*}{*}1)=x_1$, $\imp=({*}{*}0{*})=x_1'$, $\imp=(1{*}{*}{*})=x_3$.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}[t]{ |c|c| }
+        \hline
+        $I_0$ & ${*}{*}0{*}$ \\
+        $I_1$ & ${*}{*}{*}1$ \\
+        \sout{$I_2$} & \sout{${*}{*}0{*}$} \\
+        \sout{$I_3$} & \sout{${*}{*}{*}1$} \\
+        \sout{$I_4$} & \sout{${*}{*}0{*}$}\\
+        $I_5$ & ${*}1{*}{*}$ \\
+        \sout{$I_6$} & \sout{${*}{*}{*}1$} \\
+        \sout{$I_7$} & \sout{${*}{*}0{*}$} \\
+        \sout{$I_8$} & \sout{${*}1{*}{*}$} \\
+        $I_8$ & $1{*}{*}{*}$ \\
+        \sout{$I_9$} & \sout{${*}1{*}{*}$} \\
+        \sout{$I_{10}$} & \sout{${*}{*}{*}1$} \\
+        \sout{$I_{11}$} &\sout{ ${*}1{*}{*}$} \\
+        \sout{$I_{12}$} & \sout{${*}{*}0{*}$} \\
+        \sout{ $I_{13}$} & \sout{$1{*}{*}{*}$} \\
+        \sout{$I_{14}$} & \sout{${*}{*}{*}1$} \\
+        \sout{$I_{15}$} & \sout{${*}{*}0{*}$} \\
+        \sout{$I_{16}$} & \sout{$1{*}{*}{*}$} \\
+        \hline
+    \end{tabular}
+    \caption{Wszystkie implikanty proste} \label{tab:all-implicants}
+\end{table}
+%TODO: Dodać komentarz do tabeki wszytkich implikantów
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}[t]{ |c||c|c|c|c| }
+        \hline
+        & $I_0 = {*}{*}0{*}$ & $I_1 = {*}{*}{*}1$ & $I_5 = {*}1{*}{*}$ & $I_8 = 1{*}{*}{*}$ \\
+        \hline
+        \hline
+        $k_0 = 0000$ & \textbf{1} & 0 & 0 & 0 \\
+        \hline
+        \sout{$k_1 = 0001$} & \sout{1} & \sout{1} & \sout{0} & \sout{0} \\
+        \hline
+        $k_2 = 0011$ & 0 & \textbf{1} & 0 & 0 \\
+        \hline
+        \sout{$k_3 = 0100$} & \sout{1} & \sout{0} & \sout{1} & \sout{0} \\
+        \hline
+        \sout{$k_4 = 0101$} & \sout{1} & \sout{1} & \sout{1} & \sout{0} \\
+        \hline
+        $k_5 = 0110$ & 0 & 0 & \textbf{1} & 0 \\
+        \hline
+        \sout{$k_6 = 0111$} & \sout{0} & \sout{1} & \sout{1} & \sout{0} \\
+        \hline
+        \sout{$k_7 = 1000$} & \sout{1} & \sout{0} & \sout{0} & \sout{1} \\
+        \hline
+        \sout{$k_8 = 1001$} & \sout{1} & \sout{1} & \sout{0} & \sout{1} \\
+        \hline
+    \end{tabular}
+    \caption{} \label{tab:min-block}
+\end{table}
+
+Minimalne pokrycie kolumnowe implikantów prostych $L' = \{I_0, I_1, I_5\}$.
+$f_d(x_3, x_2, x_1, x_0) = x_1' + x_0 + x_2$
