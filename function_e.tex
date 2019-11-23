@@ -1,6 +1,6 @@
 %! Suppress = MissingImport
 \setcounter{implicant_counter}{0}
-%0,2,6,8
+
 Funkcja $f_e$ rozpisana na macierze $F$ i $R$ ma postać:
 \begin{center}
     \begin{tabular}[t]{ |c|c c c c|}
@@ -29,23 +29,83 @@ Funkcja $f_e$ rozpisana na macierze $F$ i $R$ ma postać:
 \end{center}
 
 Rozpoczynamy od wyznaczenia wszystkich implikantów prostych korzystając z macierzy blokujących dla kolejnych kostek
-$k_0-k_4$.
+$k_0-k_3$.
 
 \begin{table}[H]
     \centering
     \begin{tabular}[t]{ |c|c c c c| }
         \hline
-        $k_0$ & 0 & 0 & 0 & 1 \\
+        $k_0$ & 0 & 0 & 0 & 0 \\
         \hline\hline
         $B_0$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
         \hline
-        & 0 & 0 & 0 & 1 \\
-        & 0 & 0 & 1 & 1 \\
-        & 0 & 1 & 0 & 0 \\
-        & 0 & 1 & 0 & 1 \\
-        & 0 & 1 & 1 & 1 \\
-        & 1 & 0 & 0 & 1 \\
+        & 0 & 0 & 0 & \textbf{1} \\
+        & \sout{0} & \sout{0} & \sout{1} & \sout{1} \\
+        & 0 & \textbf{1} & 0 & 0 \\
+        & \sout{0} & \sout{1} & \sout{0} & \sout{1} \\
+        & \sout{0} & \sout{1} & \sout{1} & \sout{1} \\
+        & \sout{1} & \sout{0} & \sout{0} & \sout{1} \\
         \hline
     \end{tabular}
-    \caption{Macierz blokująca $B_0$} \label{tab:b0}
+    \caption{Macierz blokująca $B_0$}\label{tab:b0e}
 \end{table}
+
+Dla macierzy blokującej przedstawionej w Tablicy~\ref{tab:b0e} znajdujemy jedno minimalne pokrycie kolumnowe
+$\bm{L'=\{2,0\}}$ i wynikający z niego implikant prosty $\imp=({*}0{*}0)=x_0'x_2'$.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}[t]{ |c|c c c c|}
+        \hline
+        $I_0$ & * & 0 & * & 0 \\
+        \hline\hline
+        $F$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
+        \hline
+        \sout{$k_0$} & \sout{0} & \sout{0} & \sout{0} & \sout{0} \\
+        \sout{$k_1$} & \sout{0} & \sout{0} & \sout{1} & \sout{0} \\
+        $k_2$ & 0 & 1 & 1 & 0 \\
+        \sout{$k_3$} & \sout{1} & \sout{0} & \sout{0} & \sout{0} \\
+        \hline
+    \end{tabular}
+    \caption{Kostki do wykreślenia}\label{tab:die-0e}
+\end{table}
+%TODO: Dodać komentarz do tabelki wykreślającej
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}[t]{ |c|c c c c| }
+        \hline
+        $k_2$ & 0 & 1 & 1 & 0 \\
+        \hline\hline
+        $B_2$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
+        \hline
+        & \sout{0} & \sout{1} & \sout{1} & \sout{1} \\
+        & \sout{0} & \sout{1} & \sout{0} & \sout{1} \\
+        & 0 & 0 & \textbf{1} & 0 \\
+        & \sout{0} & \sout{0} & \sout{1} & \sout{1} \\
+        & 0 & 0 & 0 & \textbf{1} \\
+        & \sout{1} & \sout{1} & \sout{1} & \sout{1} \\
+        \hline
+    \end{tabular}
+    \caption{Macierz blokująca $B_2$}\label{tab:b2e}
+\end{table}
+
+Dla macierzy blokującej przedstawionej w Tablicy~\ref{tab:b2e} znajdujemy jedno minimalne pokrycie kolumnowe
+$\bm{L'=\{1,0\}}$ i wynikający z niego implikant prosty $\imp=({*}{*}10)=x_0'x_1$.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}[t]{ |c|c c c c|}
+        \hline
+        $I_1$ & * & * & 1 & 0 \\
+        \hline\hline
+        $F$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
+        \hline
+        \sout{$k_2$} & \sout{0} & \sout{1} & \sout{1} & \sout{0} \\
+        \hline
+    \end{tabular}
+    \caption{Kostki do wykreślenia}\label{tab:die-1e}
+\end{table}
+%TODO: Dodać komentarz do tabelki wykreślającej
+
+$f_d(x_3, x_2, x_1, x_0) = I_0 + I_1 = x_0'x_2' + x_0'x_1$
