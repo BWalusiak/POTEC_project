@@ -54,40 +54,40 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <wire from="(390,270)" to="(390,340)"/>
-    <wire from="(380,200)" to="(440,200)"/>
-    <wire from="(390,210)" to="(450,210)"/>
-    <wire from="(390,340)" to="(440,340)"/>
-    <wire from="(370,320)" to="(420,320)"/>
-    <wire from="(360,310)" to="(410,310)"/>
-    <wire from="(380,330)" to="(430,330)"/>
-    <wire from="(420,230)" to="(420,240)"/>
-    <wire from="(420,300)" to="(420,320)"/>
-    <wire from="(430,220)" to="(430,240)"/>
-    <wire from="(410,230)" to="(410,310)"/>
-    <wire from="(400,220)" to="(400,300)"/>
-    <wire from="(450,210)" to="(450,240)"/>
-    <wire from="(430,300)" to="(430,330)"/>
-    <wire from="(370,290)" to="(370,320)"/>
-    <wire from="(360,300)" to="(400,300)"/>
-    <wire from="(400,220)" to="(430,220)"/>
-    <wire from="(360,270)" to="(390,270)"/>
-    <wire from="(360,260)" to="(390,260)"/>
-    <wire from="(360,280)" to="(380,280)"/>
-    <wire from="(360,250)" to="(380,250)"/>
-    <wire from="(440,200)" to="(440,240)"/>
-    <wire from="(440,300)" to="(440,340)"/>
-    <wire from="(410,230)" to="(420,230)"/>
-    <wire from="(360,290)" to="(370,290)"/>
-    <wire from="(390,210)" to="(390,260)"/>
-    <wire from="(380,200)" to="(380,250)"/>
-    <wire from="(380,280)" to="(380,330)"/>
-    <comp lib="5" loc="(420,240)" name="7-Segment Display"/>
-    <comp lib="0" loc="(310,300)" name="Pin">
+    <wire from="(130,80)" to="(130,150)"/>
+    <wire from="(120,10)" to="(180,10)"/>
+    <wire from="(130,20)" to="(190,20)"/>
+    <wire from="(160,40)" to="(160,50)"/>
+    <wire from="(130,150)" to="(180,150)"/>
+    <wire from="(110,130)" to="(160,130)"/>
+    <wire from="(100,120)" to="(150,120)"/>
+    <wire from="(120,140)" to="(170,140)"/>
+    <wire from="(150,40)" to="(150,120)"/>
+    <wire from="(140,30)" to="(140,110)"/>
+    <wire from="(160,110)" to="(160,130)"/>
+    <wire from="(170,30)" to="(170,50)"/>
+    <wire from="(100,110)" to="(140,110)"/>
+    <wire from="(190,20)" to="(190,50)"/>
+    <wire from="(170,110)" to="(170,140)"/>
+    <wire from="(110,100)" to="(110,130)"/>
+    <wire from="(140,30)" to="(170,30)"/>
+    <wire from="(100,80)" to="(130,80)"/>
+    <wire from="(100,70)" to="(130,70)"/>
+    <wire from="(180,10)" to="(180,50)"/>
+    <wire from="(180,110)" to="(180,150)"/>
+    <wire from="(100,90)" to="(120,90)"/>
+    <wire from="(100,60)" to="(120,60)"/>
+    <wire from="(130,20)" to="(130,70)"/>
+    <wire from="(120,10)" to="(120,60)"/>
+    <wire from="(120,90)" to="(120,140)"/>
+    <wire from="(150,40)" to="(160,40)"/>
+    <wire from="(100,100)" to="(110,100)"/>
+    <comp lib="0" loc="(50,110)" name="Pin">
       <a name="width" val="4"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(310,300)" name="Splitter">
+    <comp lib="7" loc="(100,60)" name="7digit"/>
+    <comp lib="0" loc="(50,110)" name="Splitter">
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
       <a name="bit0" val="3"/>
@@ -95,6 +95,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="bit2" val="1"/>
       <a name="bit3" val="0"/>
     </comp>
-    <comp lib="7" loc="(360,250)" name="7digit"/>
+    <comp lib="5" loc="(160,50)" name="7-Segment Display"/>
   </circuit>
 </project>
