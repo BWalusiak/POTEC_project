@@ -17,10 +17,10 @@
 \usepackage{bm}
 
 \newcounter{implicant_counter}
-\newcommand{\imp}{
+\newcommand{\imp}[1]{
 I\textsubscript{\arabic{implicant_counter}}
-\label{imp:\arabic{implicant_counter}}
-\refstepcounter{implicant_counter}
+\label{imp:#1-\arabic{implicant_counter}}
+\stepcounter{implicant_counter}
 }
 
 \begin{document}
