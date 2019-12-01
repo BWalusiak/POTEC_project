@@ -2,7 +2,7 @@ Funkcja $f_b$ zapisana w postaci maxtermów wygląda następująco.
 \[f_b(x_3, x_2, x_1, x_0) = \prod (0, 1, 2, 3, 4, 7, 8, 9, (10, 11, 12, 13, 14, 15))\]
 \begin{figure}[h]
     \centering
-    \begin{karnaugh-map}[4][4][1][$x_1x_0$][$x_3x_2$]
+    \begin{karnaugh-map}[4][4][1][$x_{1}x_0$][$x_{3}x_2$]
         \minterms{5, 6}
         \maxterms{0, 1, 2, 3, 4, 7, 8, 9}
         \indeterminants{10, 11, 12, 13, 14, 15}
@@ -11,13 +11,13 @@ Funkcja $f_b$ zapisana w postaci maxtermów wygląda następująco.
         \implicant{0}{8}
         \implicant{3}{11}
     \end{karnaugh-map}
-    \caption{Tabela dla funkcji \textrm{b}}
+    \caption{Tablica dla funkcji \textrm{b}}
     \label{fig:fb}
 \end{figure}
 Minimalizację funkcji $f_b(x_3, x_2, x_1, x_0)$ za pomocą tablicy Karnaugha przedstawiono na Rys.~\ref{fig:fb}.
 Znaleziono 4 implikanty proste, z których wszystkie są niezbędne (\textrm{EIP}).
 \begin{equation}
     \label{eq:fb}
-    f_b(x_3, x_2, x_1, x_0) = (x_0+x_1)(x_0'+x_2')(x_2+x_3)(x_2+x_3')
+    f_b(x_3, x_2, x_1, x_0) = (x_1+x_0)(x_1'+x_0')(x_3+x_2)(x_3'+x_2)
 \end{equation}
 Równanie~\ref{eq:fb} jest zminimalizowanym równaniem funkcji $f_b$.
