@@ -7,13 +7,9 @@ Funkcja $f_d$ rozpisana na macierze $F$ i $R$ ma postać:
         \hline
         $F$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
         \hline
-        $k_0$ & 0 & 0 & 0 & 0 \\
-        $k_1$ & 0 & 0 & 1 & 0 \\
-        $k_2$ & 0 & 0 & 1 & 1 \\
-        $k_3$ & 0 & 1 & 0 & 1 \\
-        $k_4$ & 0 & 1 & 1 & 0 \\
-        $k_5$ & 1 & 0 & 0 & 0 \\
-        $k_6$ & 1 & 0 & 0 & 1 \\
+        $k_0$ & 0 & 0 & 0 & 1 \\
+        $k_1$ & 0 & 1 & 0 & 0 \\
+        $k_2$ & 0 & 1 & 1 & 1 \\
         \hline
     \end{tabular}
     \hspace{1cm}
@@ -21,155 +17,92 @@ Funkcja $f_d$ rozpisana na macierze $F$ i $R$ ma postać:
         \hline
         $R$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
         \hline
-        & 0 & 0 & 0 & 1 \\
-        & 0 & 1 & 0 & 0 \\
-        & 0 & 1 & 1 & 1 \\
+        & 0 & 0 & 0 & 0 \\
+        & 0 & 0 & 1 & 0 \\
+        & 0 & 0 & 1 & 1 \\
+        & 0 & 1 & 0 & 1 \\
+        & 0 & 1 & 1 & 0 \\
+        & 1 & 0 & 0 & 0 \\
+        & 1 & 0 & 0 & 1 \\
         \hline
     \end{tabular}
 \end{center}
 
 Rozpoczynamy od wyznaczenia wszystkich implikantów prostych korzystając z macierzy blokujących dla kolejnych kostek
-$k_0-k_6$.
+$k_0-k_2$.
 \begin{table}[H]
     \centering
     \begin{tabular}[t]{ |c|c c c c| }
         \hline
-        $k_0$ & 0 & 0 & 0 & 0 \\
+        $k_0$ & 0 & 0 & 0 & 1 \\
         \hline\hline
         $B_0$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
         \hline
-        & 0 & 0 & 0 & \textbf{1} \\
+        & \sout{0} & \sout{0} & \sout{0} & \sout{1} \\
+        & \sout{0} & \sout{0} & \sout{1} & \sout{1} \\
+        & 0 & 0 & \textbf{1} & 0 \\
         & 0 & \textbf{1} & 0 & 0 \\
         & \sout{0} & \sout{1} & \sout{1} & \sout{1} \\
+        & \sout{1} & \sout{0} & \sout{0} & \sout{1} \\
+        & \textbf{1} & 0 & 0 & 0 \\
         \hline
     \end{tabular}
     \caption{Macierz blokująca $B_0$} \label{tab:b0d}
 \end{table}
 Dla macierzy blokującej przedstawionej w Tablicy~\ref{tab:b0d} znajdujemy jedno minimalne pokrycie kolumnowe
-$\bm{L'=\{2,0\}}$ i wynikający z niego implikant prosty $\imp{d}=({*}0{*}0)=x_2'x_0'$.
+$\bm{L'=\{3,2,1\}}$ i wynikający z niego implikant prosty $\imp{d}=(000{*})=x_3'x_2'x_1'$.
 
 \begin{table}[H]
     \centering
     \begin{tabular}[t]{ |c|c c c c| }
         \hline
-        $k_1$ & 0 & 0 & 1 & 0 \\
+        $k_1$ & 0 & 1 & 0 & 0 \\
         \hline\hline
         $B_1$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
         \hline
-        & 0 & 0 & \textbf{1} & \textbf{1} \\
-        & 0 & 1 & \textbf{1} & 0 \\
-        & 0 & 1 & 0 & \textbf{1} \\
+        & 0 & \textbf{1} & 0 & 0 \\
+        & \sout{0} & \sout{1} & \sout{1} & \sout{0} \\
+        & \sout{0} & \sout{1} & \sout{1} & \sout{1} \\
+        & 0 & 0 & 0 & \textbf{1} \\
+        & 0 & 0 & \textbf{1} & 0 \\
+        & \sout{1} & \sout{1} & \sout{0} & \sout{0} \\
+        & \sout{1} & \sout{1} & \sout{0} & \sout{1} \\
         \hline
     \end{tabular}
     \caption{Macierz blokująca $B_1$} \label{tab:b1d}
 \end{table}
-Dla macierzy blokującej przedstawionej w Tablicy~\ref{tab:b1d} znajdujemy trzy minimalne pokrycia kolumnowe
-$\bm{L'=\{1,0\}}$, $L'=\{2,0\}$, $L'=\{2,1\}$ i
-wynikające z nich implikanty proste $\imp{d}=({*}{*}10)=x_{1}x_0'$, $\imp{d}=({*}0{*}0)=x_2'x_0'$, $\imp{d}=({*}01{*})=x_2'x_1$.
+Dla macierzy blokującej przedstawionej w Tablicy~\ref{tab:b0d} znajdujemy jedno minimalne pokrycie kolumnowe
+$\bm{L'=\{2,1,0\}}$ i wynikający z niego implikant prosty $\imp{d}=({*}100)=x_{2}x_1'x_0'$.
 
 \begin{table}[H]
     \centering
     \begin{tabular}[t]{ |c|c c c c| }
         \hline
-        $k_2$ & 0 & 0 & 1 & 1 \\
+        $k_2$ & 0 & 1 & 1 & 1 \\
         \hline\hline
         $B_2$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
         \hline
-        & 0 & 0 & \textbf{1} & 0 \\
-        & \sout{0} & \sout{\textbf{1}} & \sout{\textbf{1}} & \sout{1} \\
+        & \sout{0} & \sout{1} & \sout{1} & \sout{1} \\
+        & \sout{0} & \sout{1} & \sout{0} & \sout{1} \\
         & 0 & \textbf{1} & 0 & 0 \\
+        & 0 & 0 & \textbf{1} & 0 \\
+        & 0 & 0 & 0 & \textbf{1} \\
+        & \sout{1} & \sout{1} & \sout{1} & \sout{1} \\
+        & \sout{1} & \sout{1} & \sout{1} & \sout{0} \\
         \hline
     \end{tabular}
     \caption{Macierz blokująca $B_2$} \label{tab:b2d}
 \end{table}
 Dla macierzy blokującej przedstawionej w Tablicy~\ref{tab:b2d} znajdujemy jedno minimalne pokrycie kolumnowe
-$\bm{L'=\{2,1\}}$ i wynikający z niego implikant prosty $\imp{d}=({*}01{*})=x_2'x_1$.
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}[t]{ |c|c c c c| }
-        \hline
-        $k_3$ & 0 & 1 & 0 & 1 \\
-        \hline\hline
-        $B_3$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
-        \hline
-        & 0 & \textbf{1} & 0 & 0 \\
-        & 0 & 0 & 0 & \textbf{1} \\
-        & 0 & 0 & \textbf{1} & 0 \\
-        \hline
-    \end{tabular}
-    \caption{Macierz blokująca $B_3$} \label{tab:b3d}
-\end{table}
-Dla macierzy blokującej przedstawionej w Tablicy~\ref{tab:b3d} znajdujemy jedno minimalne pokrycie kolumnowe
-$\bm{L'=\{2,1,0\}}$ i wynikający z niego implikant prosty $\imp{d}=({*}101)=x_{2}x_1'x_0$.
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}[t]{ |c|c c c c| }
-        \hline
-        $k_4$ & 0 & 1 & 1 & 0 \\
-        \hline\hline
-        $B_4$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
-        \hline
-        & \sout{0} & \sout{1} & \sout{\textbf{1}} & \sout{\textbf{1}} \\
-        & 0 & 0 & \textbf{1} & 0 \\
-        & 0 & 0 & 0 & \textbf{1} \\
-        \hline
-    \end{tabular}
-    \caption{Macierz blokująca $B_4$} \label{tab:b4d}
-\end{table}
-Dla macierzy blokującej przedstawionej w Tablicy~\ref{tab:b4d} znajdujemy jedno minimalne pokrycie kolumnowe
-$\bm{L'=\{1,0\}}$ i wynikający z niego implikant prosty $\imp{d}=({*}{*}10)=x_{1}x_0'$.
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}[t]{ |c|c c c c| }
-        \hline
-        $k_5$ & 1 & 0 & 0 & 0 \\
-        \hline\hline
-        $B_5$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
-        \hline
-        & \textbf{1} & 0 & 0 & 1 \\
-        & \textbf{1} & 1 & 0 & 0 \\
-        & \sout{\textbf{1}} & \sout{1} & \sout{1} & \sout{1} \\
-        \hline
-    \end{tabular}
-    \caption{Macierz blokująca $B_5$} \label{tab:b5d}
-\end{table}
-Dla macierzy blokującej przedstawionej w Tablicy~\ref{tab:b5d} znajdujemy jedno minimalne pokrycie kolumnowe
-$\bm{L'=\{3\}}$ i wynikający z niego implikant prosty $\imp{d}=(1{*}{*}{*})=x_3$.
-
-\begin{table}[H]
-    \centering
-    \begin{tabular}[t]{ |c|c c c c| }
-        \hline
-        $k_6$ & 1 & 0 & 0 & 1 \\
-        \hline\hline
-        $B_6$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
-        \hline
-        & \textbf{1} & 0 & 0 & 0 \\
-        & \sout{\textbf{1}} & \sout{1} & \sout{0} & \sout{1} \\
-        & \sout{\textbf{1}} & \sout{1} & \sout{1} & \sout{0} \\
-        \hline
-    \end{tabular}
-    \caption{Macierz blokująca $B_6$} \label{tab:b6d}
-\end{table}
-Dla macierzy blokującej przedstawionej w Tablicy~\ref{tab:b6d} znajdujemy jedno minimalne pokrycie kolumnowe
-$\bm{L'=\{3\}}$ i wynikający z niego implikant prosty $\imp{d}=(1{*}{*}{*})=x_3$.
+$\bm{L'=\{2,1,0\}}$ i wynikający z niego implikant prosty $\imp{d}=({*}111)=x_{2}x_{1}x_{0}$.
 
 \begin{table}[H]
     \centering
     \begin{tabular}[t]{ |c|c| }
         \hline
-        $I_0$ & ${*}0{*}0$ \\
-        $I_1$ & ${*}{*}10$ \\
-        \sout{$I_2$} & \sout{${*}0{*}0$} \\
-        $I_3$ & ${*}01{*}$ \\
-        \sout{$I_4$} & \sout{${*}01{*}$} \\
-        $I_5$ & ${*}101$ \\
-        \sout{$I_6$} & \sout{${*}{*}10$} \\
-        $I_7$ & $1{*}{*}{*}$ \\
-        \sout{$I_8$} & \sout{$1{*}{*}{*}$} \\
+        $I_0$ & $000{*}$ \\
+        $I_1$ & ${*}100$ \\
+        $I_2$ & ${*}111$ \\
         \hline
     \end{tabular}
     \caption{Wszystkie implikanty proste} \label{tab:all-implicantsd}
@@ -178,27 +111,19 @@ $\bm{L'=\{3\}}$ i wynikający z niego implikant prosty $\imp{d}=(1{*}{*}{*})=x_3
 
 \begin{table}[H]
     \centering
-    \begin{tabular}[t]{ |c||c|c|c|c|c| }
+    \begin{tabular}[t]{ |c||c|c|c| }
         \hline
-        & $I_0 = {*}0{*}0$ & $I_1 = {*}{*}10$ & $I_3 = {*}01{*}$ & $I_5 = {*}101$ & $I_7 = 1{*}{*}{*}$ \\
+        & $I_0 = 000{*}$ & $I_1 = {*}100$ & $I_2 = {*}111$ \\
         \hline
         \hline
-        $k_0 = 0000$ & \textbf{1} & 0 & 0 & 0 & 0 \\
+        $k_0 = 0001$ & \textbf{1} & 0 & 0 \\
         \hline
-        \sout{$k_1 = 0010$} &  \sout{\textbf{1}} &  \sout{\textbf{1}} &  \sout{\textbf{1}} & \sout{0} & \sout{0} \\
+        $k_1 = 0100$ & 0 & \textbf{1} &  0 \\
         \hline
-        $k_2 = 0011$ & 0 & 0 & \textbf{1} & 0 & 0 \\
-        \hline
-        $k_3 = 0101$ & 0 & 0 & 0 & \textbf{1} & 0 \\
-        \hline
-        $k_4 = 0110$ & 0 & \textbf{1} & 0 & 0 & 0 \\
-        \hline
-        \sout{$k_5 = 1000$} &  \sout{\textbf{1}} & \sout{0} & \sout{0} & \sout{0} &  \sout{\textbf{1}} \\
-        \hline
-        $k_6 = 1001$ & 0 & 0 & 0 & 0 & \textbf{1} \\
+        $k_2 = 0111$ & 0 & 0 & \textbf{1} \\
         \hline
     \end{tabular}
     \caption{} \label{tab:min-blockd}
 \end{table}
-Minimalne pokrycie kolumnowe implikantów prostych $L' = \{I_0, I_1, I_3, I_5, I_7\}$.
-$f_d(x_3, x_2, x_1, x_0) = x_2'x_0' + x_{1}x_0' + x_2'x_1 + x_3$
+Minimalne pokrycie kolumnowe implikantów prostych $L' = \{I_0, I_1, I_2\}$.
+$f_d(x_3, x_2, x_1, x_0) = x_3'x_2'x_1' + x_{2}x_1'x_0' + x_{2}x_{1}x_{0}$
