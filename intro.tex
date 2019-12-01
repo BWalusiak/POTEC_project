@@ -1,1 +1,33 @@
-%TODO Dodać wstęp do projetku
+\subsection{Cel projektu}\label{subsec:intro-goal}
+Projekt ma na celu analizę i realizację siedmiosegmentowego układu obwodu dekodera, którego aktywnym sygnałem jest $0$.
+Wyświetlacze siedmiosegmentowe są tymi najczęściej stosowanymi do wyświetlenia liczb (w celu uzyskania odczytu dziesiętnego).
+
+\subsection{Realizacja projektu}\label{subsec:intro-how}
+Realizacja układu dekodera została podzielona na 3 etapy:
+\begin{enumerate}
+    \item Zapisano tablicę prawdy dla każdego z segmentów - przedstawioną w Tablicy~\ref{tab:truth-table}.
+    \item Wyznaczono minimalne postaci każdej z funkcji korzystając z metod tablic Karnaugha oraz Espresso.
+    \item Zrealizowano dekoder przy użyciu oprogramowania Logisim, mając na uwadze fakt,
+    iż aktywnym sygnałem w tym programie jest $1$.
+\end{enumerate}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c||c|c|c|c|c|c|c|}
+        \hline
+        $x_3$ & $x_2$ & $x_1$ & $x_0$ & $f_a$ & $f_b$ & $f_c$ & $f_d$ & $f_e$ & $f_f$ & $f_g$ \\ \hline
+        \hline
+        0     & 0     & 0     & 0     & 0     & 0     & 0     & 0     & 0     & 0     & 1     \\ \hline
+        0     & 0     & 0     & 1     & 1     & 0     & 0     & 1     & 1     & 1     & 1     \\ \hline
+        0     & 0     & 1     & 0     & 0     & 0     & 1     & 0     & 0     & 1     & 0     \\ \hline
+        0     & 0     & 1     & 1     & 0     & 0     & 0     & 0     & 1     & 1     & 0     \\ \hline
+        0     & 1     & 0     & 0     & 1     & 0     & 0     & 1     & 1     & 0     & 0     \\ \hline
+        0     & 1     & 0     & 1     & 0     & 1     & 0     & 0     & 1     & 0     & 0     \\ \hline
+        0     & 1     & 1     & 0     & 0     & 1     & 0     & 0     & 0     & 0     & 0     \\ \hline
+        0     & 1     & 1     & 1     & 0     & 0     & 0     & 1     & 1     & 1     & 1     \\ \hline
+        1     & 0     & 0     & 0     & 0     & 0     & 0     & 0     & 0     & 0     & 0     \\ \hline
+        1     & 0     & 0     & 1     & 1     & 0     & 0     & 0     & 1     & 0     & 0     \\ \hline
+    \end{tabular}
+    \caption{Tablica prawdy dekodera}
+    \label{tab:truth-table}
+\end{table}
