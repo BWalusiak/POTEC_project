@@ -51,19 +51,19 @@ $k_0-k_3$.
 \end{table}
 
 Dla macierzy blokującej przedstawionej w Tablicy~\ref{tab:b0f} znajdujemy jedno minimalne pokrycie kolumnowe
-$\bm{L'=\{2,1,0\}}$ i wynikający z niego implikant prosty $\imp{f}=(000{*})=x_3'x_2'x_1'$.
+$\bm{L'=\{3,2,0\}}$ i wynikający z niego implikant prosty $\imp{f}=(00{*}1)=x_3'x_2'x_0$.
 
 \begin{table}[H]
     \centering
     \begin{tabular}[t]{ |c|c c c c| }
         \hline
-        $I_0$ & 0 & 0 & 0 & $*$ \\
+        $I_0$ & 0 & 0 & $*$ & 1 \\
         \hline\hline
         $F$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
         \hline
         \sout{$k_0$} & \sout{0} & \sout{0} & \sout{0} & \sout{1} \\
         $k_1$ & 0 & 0 & 1 & 0 \\
-        $k_2$ & 0 & 0 & 1 & 1 \\
+        \sout{$k_2$} & \sout{0} & \sout{0} & \sout{1} & \sout{1} \\
         $k_3$ & 0 & 1 & 1 & 1 \\
         \hline
     \end{tabular}
@@ -103,7 +103,6 @@ $\bm{L'=\{2,1\}}$ i wynikający z niego implikant prosty $\imp{f}=({*}01{*})=x_2
         $F$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
         \hline
         \sout{$k_1$} & \sout{0} & \sout{0} & \sout{1} & \sout{0} \\
-        \sout{$k_2$} & \sout{0} & \sout{0} & \sout{1} & \sout{1} \\
         $k_3$ & 0 & 1 & 1 & 1 \\
         \hline
     \end{tabular}
@@ -153,5 +152,5 @@ i które należy wykreślić.
 Ostateczną postać funkcji $f_f$, po minimalizacji przedstawiono w równaniu~\ref{eq:ff}.
 \begin{equation}
     \label{eq:ff}
-    f_f(x_3, x_2, x_1, x_0) = I_0 + I_1 + I_2 = x_3'x_2'x_1' + x_2'x_1 + x_{1}x_0
+    f_f(x_3, x_2, x_1, x_0) = I_0 + I_1 + I_2 = x_3'x_2'x_0 + x_2'x_1 + x_{1}x_0
 \end{equation}
