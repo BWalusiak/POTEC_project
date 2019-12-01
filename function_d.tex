@@ -38,7 +38,7 @@ $k_0-k_2$.
         \hline\hline
         $B_0$ & $x_3$ & $x_2$ & $x_1$ & $x_0$ \\
         \hline
-        & \sout{0} & \sout{0} & \sout{0} & \sout{1} \\
+        & 0 & 0 & 0 & \textbf{1} \\
         & \sout{0} & \sout{0} & \sout{1} & \sout{1} \\
         & 0 & 0 & \textbf{1} & 0 \\
         & 0 & \textbf{1} & 0 & 0 \\
@@ -50,7 +50,7 @@ $k_0-k_2$.
     \caption{Macierz blokująca $B_0$} \label{tab:b0d}
 \end{table}
 Dla macierzy blokującej przedstawionej w Tablicy~\ref{tab:b0d} znajdujemy jedno minimalne pokrycie kolumnowe
-$\bm{L'=\{3,2,1\}}$ i wynikający z niego implikant prosty $\imp{d}=(000{*})=x_3'x_2'x_1'$.
+$\bm{L'=\{3,2,1,0\}}$ i wynikający z niego implikant prosty $\imp{d}=(0000)=x_3'x_2'x_1'x_0$.
 
 \begin{table}[H]
     \centering
@@ -100,7 +100,7 @@ $\bm{L'=\{2,1,0\}}$ i wynikający z niego implikant prosty $\imp{d}=({*}111)=x_{
     \centering
     \begin{tabular}[t]{ |c|c| }
         \hline
-        $I_0$ & $000{*}$ \\
+        $I_0$ & $0001$ \\
         $I_1$ & ${*}100$ \\
         $I_2$ & ${*}111$ \\
         \hline
@@ -113,7 +113,7 @@ $\bm{L'=\{2,1,0\}}$ i wynikający z niego implikant prosty $\imp{d}=({*}111)=x_{
     \centering
     \begin{tabular}[t]{ |c||c|c|c| }
         \hline
-        & $I_0 = 000{*}$ & $I_1 = {*}100$ & $I_2 = {*}111$ \\
+        & $I_0 = 0001$ & $I_1 = {*}100$ & $I_2 = {*}111$ \\
         \hline
         \hline
         $k_0 = 0001$ & \textbf{1} & 0 & 0 \\
@@ -126,4 +126,4 @@ $\bm{L'=\{2,1,0\}}$ i wynikający z niego implikant prosty $\imp{d}=({*}111)=x_{
     \caption{} \label{tab:min-blockd}
 \end{table}
 Minimalne pokrycie kolumnowe implikantów prostych $L' = \{I_0, I_1, I_2\}$.
-$f_d(x_3, x_2, x_1, x_0) = x_3'x_2'x_1' + x_{2}x_1'x_0' + x_{2}x_{1}x_{0}$
+$f_d(x_3, x_2, x_1, x_0) = x_3'x_2'x_1'x_0 + x_{2}x_1'x_0' + x_{2}x_{1}x_{0}$
