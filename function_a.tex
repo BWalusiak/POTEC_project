@@ -2,7 +2,7 @@ Funkcja $f_a$ zapisana w postaci makstermów wygląda następująco:
 \[f_a(x_3, x_2, x_1, x_0) = \prod (0, 2, 3, 5, 6, 7, 8, 9, (10, 11, 12, 13, 14, 15))\]
 \begin{figure}[h]
     \centering
-    \begin{karnaugh-map}[4][4][1][$x_1x_0$][$x_3x_2$]
+    \begin{karnaugh-map}[4][4][1][$x_{1}x_0$][$x_{3}x_2$]
         \minterms{1,4}
         \maxterms{0, 2, 3, 5, 6, 7, 8, 9}
         \indeterminants{10, 11, 12, 13, 14, 15}
@@ -20,4 +20,4 @@ Znaleziono 4 implikanty proste, z których wszystkie były niezbędne (\textrm{E
     \label{eq:fa}
     f_a(x_3, x_2, x_1, x_0) = (x_0 + x_2)x_1'(x_0'+x_2')x_3'
 \end{equation}
-Równanie~\ref{eq:fa} jest zminimalizowanym równaniem funkcji  $f_a$.
+Równanie~\ref{eq:fa} jest zminimalizowanym równaniem funkcji $f_a$.
